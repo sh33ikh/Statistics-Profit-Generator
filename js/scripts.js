@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     urlForm.addEventListener('submit', handleAnalysis);
     userUrlInput.addEventListener('input', validateUrlInput);
+    analysisTypeSelect.addEventListener('change', updateAnalysisType);
 
     function validateUrlInput() {
         const url = userUrlInput.value.trim();
@@ -32,6 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
             urlValidationMessage.textContent = 'Please enter a valid URL';
             urlValidationMessage.className = 'validation-message error';
         }
+    }
+
+    function updateAnalysisType() {
+        const analysisType = analysisTypeSelect.value;
+        startButton.textContent = `Start ${analysisType.charAt(0).toUpperCase() + analysisType.slice(1)} Analysis`;
     }
 
     function handleAnalysis(event) {
@@ -53,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const statistics = generateRandomStatistics(analysisType);
             displayStatistics(statistics);
             updateChart(statistics);
-            saveAnalysis(url, statistics);
+            saveAnalysis(url, statistics, analysisType);
             updateComparisonTable();
             showLoading(false);
         }, 2000);
@@ -184,8 +190,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function saveAnalysis(url, statistics) {
-        analysisHistory.unshift({ url, statistics, timestamp: new Date().toISOString() });
+    function saveAnalysis(url, statistics, analysisType) {
+        analysisHistory.unshift({ url, statistics, analysisType, timestamp: new Date().toISOString() });
         if (analysisHistory.length > 5) {
             analysisHistory.pop();
         }
@@ -199,6 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let tableHTML = `
             <tr>
                 <th>URL</th>
+                <th>Analysis Type</th>
                 <th>Impressions</th>
                 <th>Clicks</th>
                 <th>CTR</th>
@@ -211,6 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tableHTML += `
                 <tr>
                     <td>${item.url}</td>
+                    <td>${item.analysisType}</td>
                     <td>${item.statistics.impressions.toLocaleString()}</td>
                     <td>${item.statistics.clicks.toLocaleString()}</td>
                     <td>${item.statistics.ctr}%</td>
