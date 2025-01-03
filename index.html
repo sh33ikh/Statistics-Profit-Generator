@@ -2,77 +2,114 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Generate advanced web statistics for impressions, clicks, CTR, CPM, and revenue with our AI-powered Statistics Profit Generator. Get insights into your website's performance and potential earnings.">
-    <meta name="keywords" content="statistics, analytics, impressions, clicks, CTR, CPM, revenue, web tool, AI analytics, profit estimation">
-    <meta name="author" content="Sh33ikh">
-    <meta property="og:title" content="Advanced AI-Powered Statistics Profit Generator">
-    <meta property="og:description" content="Generate comprehensive web analytics and profit estimations with our cutting-edge AI tool.">
-    <meta property="og:image" content="https://example.com/og-image.jpg">
-    <meta property="og:url" content="https://example.com/statistics-profit-generator">
-    <meta name="twitter:card" content="summary_large_image">
-    <title>Advanced AI-Powered Statistics Profit Generator | Web Analytics Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Statistics Profit Generator | Optimize Your Online Performance</title>
+    <meta name="description" content="Generate and analyze statistics for your URLs to maximize profit and optimize performance. Get insights on impressions, clicks, CTR, CPM, and revenue.">
+    <meta name="keywords" content="statistics, profit generator, online performance, URL analysis, CTR, CPM, revenue optimization">
+    <meta name="author" content="Your Company Name">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.yourwebsite.com/statistics-profit-generator">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourwebsite.com/statistics-profit-generator">
+    <meta property="og:title" content="Advanced Statistics Profit Generator">
+    <meta property="og:description" content="Optimize your online performance with our advanced statistics and profit analysis tool.">
+    <meta property="og:image" content="https://www.yourwebsite.com/images/statistics-profit-generator-og.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.yourwebsite.com/statistics-profit-generator">
+    <meta property="twitter:title" content="Advanced Statistics Profit Generator">
+    <meta property="twitter:description" content="Optimize your online performance with our advanced statistics and profit analysis tool.">
+    <meta property="twitter:image" content="https://www.yourwebsite.com/images/statistics-profit-generator-twitter.jpg">
+
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/scripts.js" defer></script>
+    <script type='text/javascript' src='//pl25462595.profitablecpmrate.com/e9/3a/8f/e93a8f01e151a1b29cac077e93f011d1.js'></script>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Advanced AI-Powered Statistics Profit Generator</h1>
-            <p>Get comprehensive insights into your website's performance and potential earnings</p>
+            <h1><i class="fas fa-chart-line"></i> Advanced Statistics Profit Generator</h1>
+            <p>Optimize Your Online Performance</p>
         </header>
         <main>
-            <form id="urlForm">
-                <label for="userUrl">Enter a URL to Analyze:</label>
-                <div class="input-group">
-                    <input type="url" id="userUrl" name="userUrl" placeholder="https://example.com" required>
+            <section id="adBanner1" class="ad-banner">
+                <a href="" rel="nofollow">
+                    <img alt="Adsterra banner" src="https://landings-cdn.adsterratech.com/referralBanners/gif/720x90_adsterra_reff.gif" />
+                </a>
+            </section>
+            <section id="inputSection">
+                <form id="urlForm">
+                    <div class="form-group">
+                        <label for="userUrl">Enter URL:</label>
+                        <input type="url" id="userUrl" name="userUrl" required placeholder="https://example.com">
+                        <span id="urlValidationMessage" class="validation-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="analysisType">Analysis Type:</label>
+                        <select id="analysisType" name="analysisType">
+                            <option value="basic">Basic</option>
+                            <option value="advanced">Advanced</option>
+                            <option value="comprehensive">Comprehensive</option>
+                        </select>
+                    </div>
                     <button type="submit" id="startButton">
-                        <i class="fas fa-chart-line"></i> Generate Statistics
+                        <i class="fas fa-play"></i> Start Analysis
                     </button>
-                </div>
-            </form>
-            <div id="loadingIndicator" class="hidden">
-                <i class="fas fa-spinner fa-spin"></i> Analyzing with AI...
-            </div>
-            <div id="errorMessage" class="hidden"></div>
-            <section id="results" class="hidden">
-                <h2>Generated Statistics</h2>
-                <div class="stats-grid">
-                    <div class="stat-card">
+                </form>
+            </section>
+            <section id="loadingSection" class="hidden">
+                <div class="loader"></div>
+                <p>Analyzing data... Please wait.</p>
+            </section>
+            <section id="resultsSection" class="hidden">
+                <h2>Analysis Results</h2>
+                <div class="results-grid">
+                    <div class="result-item">
                         <i class="fas fa-eye"></i>
-                        <h3>Impressions</h3>
-                        <p id="impressions">0</p>
+                        <span>Impressions:</span>
+                        <span id="impressions" class="value">0</span>
                     </div>
-                    <div class="stat-card">
+                    <div class="result-item">
                         <i class="fas fa-mouse-pointer"></i>
-                        <h3>Clicks</h3>
-                        <p id="clicks">0</p>
+                        <span>Clicks:</span>
+                        <span id="clicks" class="value">0</span>
                     </div>
-                    <div class="stat-card">
+                    <div class="result-item">
                         <i class="fas fa-percentage"></i>
-                        <h3>CTR</h3>
-                        <p><span id="ctr">0</span>%</p>
+                        <span>CTR:</span>
+                        <span id="ctr" class="value">0%</span>
                     </div>
-                    <div class="stat-card">
+                    <div class="result-item">
                         <i class="fas fa-dollar-sign"></i>
-                        <h3>CPM</h3>
-                        <p>$<span id="cpm">0.00</span></p>
+                        <span>CPM:</span>
+                        <span id="cpm" class="value">$0.00</span>
                     </div>
-                    <div class="stat-card">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Revenue</h3>
-                        <p>$<span id="revenue">0.00</span></p>
+                    <div class="result-item">
+                        <i class="fas fa-coins"></i>
+                        <span>Revenue:</span>
+                        <span id="revenue" class="value">$0.00</span>
                     </div>
                 </div>
-                <div class="chart-container">
-                    <canvas id="revenueChart"></canvas>
+                <div id="chartContainer">
+                    <canvas id="statsChart"></canvas>
                 </div>
-                <div id="aiInsights" class="hidden">
-                    <h3>AI-Generated Insights</h3>
-                    <p id="aiInsightsText"></p>
-                </div>
+            </section>
+            <section id="compareSection" class="hidden">
+                <h2>URL Comparison</h2>
+                <div id="comparisonTable"></div>
+            </section>
+            <section id="errorSection" class="hidden">
+                <p id="errorMessage"></p>
+            </section>
+            <section id="adBanner2" class="ad-banner">
+                <a href="" rel="nofollow">
+                    <img alt="Adsterra banner" src="https://landings-cdn.adsterratech.com/referralBanners/gif/700x90_adsterra_reff.gif" />
+                </a>
             </section>
         </main>
         <footer>
