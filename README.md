@@ -1,75 +1,86 @@
 # Statistics Profit Generator
 
-![License](https://img.shields.io/github/license/sh33ikh/Statistics-Profit-Generator)
-![Issues](https://img.shields.io/github/issues/sh33ikh/Statistics-Profit-Generator)
-![Stars](https://img.shields.io/github/stars/sh33ikh/Statistics-Profit-Generator)
-![Forks](https://img.shields.io/github/forks/sh33ikh/Statistics-Profit-Generator)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Vercel](https://img.shields.io/badge/vercel-deployed-success)](https://statistics-profit-generator.vercel.app/)
+[![Made with Love](https://img.shields.io/badge/made%20with-❤-red.svg)](https://github.com/sh33ikh)
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+A modern, dynamic web application for analyzing and optimizing URL performance metrics with advanced statistical analysis.
 
-## Introduction
-Statistics Profit Generator is a tool designed to help you analyze data and generate profit forecasts based on statistical models. It's designed for ease of use, flexibility, and provides powerful insights to support your business decisions.
+## 🌟 Features
 
-## Features
-- **Data Analysis**: Perform complex data analysis with simple commands.
-- **Profit Forecasting**: Generate profit forecasts based on statistical models.
-- **Customizable Reports**: Customize and export detailed reports.
-- **User-Friendly Interface**: Intuitive interface for effortless navigation.
+- Real-time URL performance analysis
+- Multiple analysis types (Basic, Advanced, Comprehensive)
+- Interactive data visualization with Chart.js
+- Historical comparison tracking
+- Responsive material design
+- Advanced metrics calculation (Impressions, Clicks, CTR, CPM, Revenue)
+- Local storage for analysis history
+- Mobile-first approach
 
-## Installation
-To install the Statistics Profit Generator, follow these steps:
+## 🚀 Live Demo
+
+Visit the live application at: [https://statistics-profit-generator.vercel.app/](https://statistics-profit-generator.vercel.app/)
+
+## 💻 Tech Stack
+
+- HTML5
+- CSS3 (Custom Properties, Flexbox, Grid)
+- JavaScript (ES6+)
+- Chart.js for data visualization
+- Font Awesome for icons
+- Google Fonts
+- Local Storage API
+
+## 📦 Installation
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/sh33ikh/Statistics-Profit-Generator.git
-    ```
+```bash
+git clone https://github.com/sh33ikh/Statistics-Profit-Generator.git
+```
+
 2. Navigate to the project directory:
-    ```bash
-    cd Statistics-Profit-Generator
-    ```
-3. Install the required dependencies:
-    ```bash
-    npm install
-    ```
-
-## Usage
-To use the Statistics Profit Generator, execute the following command:
-
 ```bash
-npm start
+cd Statistics-Profit-Generator
 ```
 
-You can also generate reports by running:
-
+3. Open index.html in your preferred browser or use a local server:
 ```bash
-npm run generate-report
+# Using Python
+python -m http.server 8000
+
+# Using Node.js
+npx serve
 ```
 
-For more detailed usage instructions, refer to the [User Guide](./docs/user-guide.md).
+## 🔧 Usage
 
-## Contributing
-We welcome contributions from the community! To contribute, follow these steps:
+1. Enter a valid URL in the input field
+2. Select your preferred analysis type:
+   - Basic: Standard metrics
+   - Advanced: Enhanced analysis with additional insights
+   - Comprehensive: Full detailed analysis with extended metrics
+3. Click "Start Analysis" to generate statistics
+4. View results in both graphical and tabular formats
+5. Compare with historical analyses
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -am 'Add new feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Open a Pull Request.
+## 🤝 Contributing
 
-For more detailed contribution guidelines, refer to [CONTRIBUTING.md](./CONTRIBUTING.md).
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+## 📜 License
 
-## Contact
-For any questions or feedback, feel free to reach out:
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-- **Email**: sh33ikh@example.com
-- **GitHub**: [sh33ikh](https://github.com/sh33ikh)
+## 📞 Contact
+
+Join us on Telegram: [@RektDevelopers](https://t.me/RektDevelopers)
+
+GitHub: [@sh33ikh](https://github.com/sh33ikh)
+
+## ⭐ Show your support
+
+Give a ⭐️ if this project helped you!
